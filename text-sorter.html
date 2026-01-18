@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Sorter Tool Online – I Love Multi Tool</title>
+  <meta name="description" content="Free online text sorter tool to sort text lines alphabetically, reverse order, remove duplicates, and clean text easily.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6f8;
+      color: #222;
+    }
+
+    header, footer {
+      background: #ffffff;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px;
+    }
+
+    .top-ad, .bottom-ad {
+      background: #e6e6e6;
+      text-align: center;
+      padding: 20px;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .layout {
+      display: flex;
+      gap: 15px;
+    }
+
+    .left-ad, .right-ad {
+      width: 160px;
+      background: #e6e6e6;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .tool-box {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 10px;
+      font-size: 15px;
+      resize: vertical;
+    }
+
+    .controls {
+      margin: 15px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .controls button {
+      padding: 8px 14px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .controls button:hover {
+      background: #0056b3;
+    }
+
+    .rules {
+      margin-top: 30px;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .left-ad, .right-ad {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>I Love Multi Tool</h1>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- TOP AD -->
+  <div class="top-ad">
+    <!-- Paste Top Banner Ad Code Here -->
+    Top Banner Ad
+  </div>
+
+  <div class="layout">
+
+    <!-- LEFT AD -->
+    <div class="left-ad">
+      <!-- Paste Left Side Ad Code Here -->
+      Left Side Ad
+    </div>
+
+    <!-- TOOL CONTENT -->
+    <div class="tool-box">
+
+      <h2>Text Sorter Tool</h2>
+      <p>Paste your text lines below and sort them alphabetically or clean duplicates.</p>
+
+      <textarea id="inputText" placeholder="Paste your text here (one item per line)..."></textarea>
+
+      <div class="controls">
+        <button onclick="sortAZ()">Sort A → Z</button>
+        <button onclick="sortZA()">Sort Z → A</button>
+        <button onclick="removeDuplicates()">Remove Duplicates</button>
+        <button onclick="clearEmpty()">Remove Empty Lines</button>
+        <button onclick="copyResult()">Copy Result</button>
+      </div>
+
+      <textarea id="outputText" placeholder="Sorted text will appear here..." readonly></textarea>
+
+      <!-- LONG HUMAN-WRITTEN CONTENT -->
+      <div class="rules">
+        <h3>About This Text Sorter Tool</h3>
+
+        <p>
+        A text sorter tool is extremely helpful when working with lists, data entries,
+        names, keywords, or any content that needs to be organized in a clean and logical way.
+        When text is not properly sorted, it becomes difficult to read, analyze, or reuse.
+        This tool helps solve that problem instantly.
+        </p>
+
+        <p>
+        This text sorter works line by line. Each new line is treated as a separate item.
+        When you paste your content into the input box, you can sort it alphabetically
+        from A to Z or in reverse order from Z to A with just one click.
+        </p>
+
+        <p>
+        The remove duplicates feature is useful when your list contains repeated items.
+        It automatically detects identical lines and keeps only one copy,
+        helping you clean and organize your data efficiently.
+        </p>
+
+        <p>
+        Empty lines are another common issue when copying text from different sources.
+        The remove empty lines option clears unnecessary blank lines,
+        making the output more compact and readable.
+        </p>
+
+        <p>
+        This tool is widely used by SEO professionals to sort keyword lists,
+        developers to organize configuration values,
+        students to arrange study notes,
+        and office workers to manage lists and records.
+        </p>
+
+        <p>
+        Everything runs directly in your web browser using JavaScript.
+        No data is uploaded to any server, and no information is stored.
+        Your text remains private and secure.
+        </p>
+
+        <p>
+        The interface is intentionally kept simple so that anyone can use it
+        without technical knowledge. There are no complicated settings or options.
+        Just paste, click, and copy.
+        </p>
+
+        <p>
+        This text sorter tool works smoothly on mobile phones, tablets,
+        and desktop computers. It automatically adjusts to different screen sizes
+        to ensure a consistent experience.
+        </p>
+
+        <p>
+        While the tool is designed to be accurate, always review the final output
+        before using it in professional or official documents.
+        Different platforms may have specific formatting requirements.
+        </p>
+
+        <p>
+        By using this tool, you agree that it is provided for informational purposes only.
+        The developers are not responsible for any issues caused by the use of sorted data.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT AD -->
+    <div class="right-ad">
+      <!-- Paste Right Side Ad Code Here -->
+      Right Side Ad
+    </div>
+
+  </div>
+
+  <!-- BOTTOM AD -->
+  <div class="bottom-ad">
+    <!-- Paste Bottom Banner Ad Code Here -->
+    Bottom Banner Ad
+  </div>
+
+</div>
+
+<footer>
+  © 2026 I Love Multi Tool. All rights reserved.
+</footer>
+
+<script>
+  function getLines() {
+    return document.getElementById("inputText").value
+      .split("\n")
+      .map(line => line.trim());
+  }
+
+  function sortAZ() {
+    const lines = getLines().sort((a, b) => a.localeCompare(b));
+    document.getElementById("outputText").value = lines.join("\n");
+  }
+
+  function sortZA() {
+    const lines = getLines().sort((a, b) => b.localeCompare(a));
+    document.getElementById("outputText").value = lines.join("\n");
+  }
+
+  function removeDuplicates() {
+    const lines = [...new Set(getLines())];
+    document.getElementById("outputText").value = lines.join("\n");
+  }
+
+  function clearEmpty() {
+    const lines = getLines().filter(line => line.length > 0);
+    document.getElementById("outputText").value = lines.join("\n");
+  }
+
+  function copyResult() {
+    const output = document.getElementById("outputText");
+    output.select();
+    document.execCommand("copy");
+    alert("Sorted text copied to clipboard");
+  }
+</script>
+
+</body>
+</html>
